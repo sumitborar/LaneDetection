@@ -17,10 +17,10 @@ The goals / steps of this project are the following:
 My pipeline consisted of 8 steps as shown below.
 
 
-<img src="LaneDetectionPipleline.jpg" width="480" alt="Pipeline Image" />
+<img src="LaneDetectionPipeline.jpg" width="480" alt="Pipeline Image" />
 
-[image2]: ./LaneDetectionPipleline.jpg
-
+[image2]: ./LaneDetectionPipeline.jpg
+            
 ####Step 1: Input image
 Each video frame is passed as input image to the pipeline. For the challenge video, I resize input image to (540, 960) size. This is not necessary and can be avoided by passing size parameters to subsequent steps.
 

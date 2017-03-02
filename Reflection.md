@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 8 steps as shown below.
 
-[image1]: ./LaneDetectionPipleline.jpg
+[image2]: ./LaneDetectionPipleline.jpg
 
 ####Step 1: Input image
 Each video frame is passed as input image to the pipeline. For the challenge video, I resize input image to (540, 960) size. This is not necessary and can be avoided by passing size parameters to subsequent steps.
@@ -39,6 +39,7 @@ Both masked lane images from step 2 and step 3 are blended in order to provide a
 ####Step 5: Hough transform  
 Next Hough transform is applied. This process returns a bunch of line segments available in the lane image. Following hyperparameters are configured
 rho = 2# distance resolution in pixels of the Hough grid
+
    theta = np.pi/180
    threshold = 5  
    min_line_len = 20
@@ -50,6 +51,7 @@ Takes input as array of HoughLine segments generated in previous step and return
 ####Step 7: Draw lane lines
 
 Following steps are used to draw lanes based on the left and right lane segments
+
 1. A blank mask of same size as the image is created.
 2. If both left and right lane points are available, we use least square regression method to fit a line through these points. In cases when we are unable to get left and right lane points, previous frames lane markers are utilized. A lane marker is defined as starting and ending points of a lane.
 3. In order to avoid jittery effect in the video, previous frames lane markers are regressed with current lane markers. This ensures smoothness of the lanes across frames

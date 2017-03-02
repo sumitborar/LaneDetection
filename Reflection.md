@@ -13,8 +13,11 @@ The goals / steps of this project are the following:
 ### Reflection
 
 ###1. Pipeline description
-
+---
 My pipeline consisted of 8 steps as shown below.
+
+
+<img src="lLaneDetectionPipleline.jpg" width="480" alt="Pipeline Image" />
 
 [image2]: ./LaneDetectionPipleline.jpg
 
@@ -63,12 +66,13 @@ Blend the calculated lane lines with the original image to create the results.
 
 
 ###2. Identify potential shortcomings with your current pipeline
-
+---
 1. Current code transforms given frames to fixed size before detecting lanes on it. This can be easily fixed by using image shape instead of hard parameters in functions
 2. Lanes with markings in center will not be detected properly by the current pipeline.
 
 
 ###3. Suggest possible improvements to your pipeline
+---
 
 Possible areas of improvement:
 

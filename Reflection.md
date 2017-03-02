@@ -1,15 +1,4 @@
 
-**Finding Lane Lines on the Road**
-
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
 ### Reflection
 
 ###1. Pipeline description
@@ -20,7 +9,7 @@ My pipeline consisted of 8 steps as shown below.
 <img src="LaneDetectionPipeline.jpg" width="480" alt="Pipeline Image" />
 
 [image2]: ./LaneDetectionPipeline.jpg
-            
+
 ####Step 1: Input image
 Each video frame is passed as input image to the pipeline. For the challenge video, I resize input image to (540, 960) size. This is not necessary and can be avoided by passing size parameters to subsequent steps.
 
@@ -63,12 +52,12 @@ Following steps are used to draw lanes based on the left and right lane segments
 
 ####Step 8: Overlap with original image
 Blend the calculated lane lines with the original image to create the results.
----
+
 ###2. Identify potential shortcomings with your current pipeline
 
 1. Current code transforms given frames to fixed size before detecting lanes on it. This can be easily fixed by using image shape instead of hard parameters in functions
 2. Lanes with markings in center will not be detected properly by the current pipeline.
----
+
 ###3. Suggest possible improvements to your pipeline
 
 Possible areas of improvement:
